@@ -1,0 +1,167 @@
+formData: {
+  title: {
+    name: '活动标题',
+    value: '用户裂变',
+    rules: {
+      require: true,
+      type: 'String',
+      max: 25,
+      regex: ''
+    }
+  },
+  sponsor: {
+    name: '活动主办方',
+    value: '',
+    rules: {
+      require: false,
+      type: 'String',
+      max: 25,
+      regex: ''
+    }
+  },
+  timeRange: {
+    name: '活动时间',
+    startTime: {
+      value: '2020-5-2',
+      rules: {
+        require: true,
+        type: 'Number',
+        max: 0,
+        regex: ''
+        }
+    },
+    endTime: {
+      value: '2020-5-2',
+      rules: {
+        require: true,
+        type: 'Number',
+        max: 0,
+        regex: ''
+      }
+    },
+  },
+  place: {
+    name: '活动地点',
+    value: '',
+    rules: {
+      require: true,
+      type: 'String',
+      max: 0,
+      regex: ''
+    }
+  },
+  target: {
+    name: '参与对象',
+    value: '对应的code',   
+    rules: {
+      require: true,
+      type: 'String',
+      max: 0,
+      regex: ''
+    }
+  },
+  target: {
+    name: '活动入口',
+    value: '对应的code',   
+    rules: {
+      require: true,
+      type: 'String',
+      max: 0,
+      regex: ''
+    }
+  },
+  introduction: {
+    name: '活动简介（分享简介）',
+    value: '',   
+    rules: {
+      require: false,
+      type: 'String',
+      max: 125,
+      regex: ''
+    }
+  },
+  ruleDesc: {
+    name: '活动规则说明',
+    value: '',   
+    rules: {
+      require: true,
+      type: 'String',
+      max: 512,
+      regex: ''
+    }
+  },
+  bgImg: {
+    name: '专题页背景图不超过1M',
+    value: [],   
+    rules: {
+      require: false,
+      type: 'Array',
+      max: 1,
+      regex: ''
+    }
+  },
+  bannerImg: {
+    name: '专题页活动介绍图不超过1M',
+    value: [],   
+    rules: {
+      require: false,
+      type: 'Array',
+      max: 1,
+      regex: ''
+    }
+  },
+  dynamicForm: [
+    // type: name | phone | gender | age | custom,
+    {
+      type: name ,
+      name: {
+        name: '姓名',
+        value: '',
+        rules: {
+          require: true,
+          type: 'string',
+          min: 2
+          max: 16,
+          regex: ''
+        }
+      }
+    },
+    {
+      type: phone ,
+      phone: {
+        name: '手机号',
+        value: '',
+        rules: {
+          require: true,
+          type: 'Number',
+          max: 11,
+          regex: ''
+        }
+      }
+    },
+    {
+      type: custom ,
+      customName填写的标识: {
+        name: '',
+        value: '',
+        rules: {
+          require: true,
+          type: 'Number',
+          max: 11,
+          regex: ''
+        }
+      }
+    },
+  ],
+  rewardForm: [
+    {
+      name: '',
+      type: '',
+      content: '',
+      conditions: '',
+      number： '',
+      
+
+    }
+  ]
+}

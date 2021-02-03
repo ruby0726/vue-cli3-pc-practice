@@ -1,0 +1,38 @@
+
+<html lang="en" style="height: 100%;">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <title>测试damo</title>
+</head>
+
+<body>
+  <noscript>
+    <strong>请使用支持javascript的浏览器</strong>
+  </noscript>
+  <div id="app">1213123111220980980</div>
+  <button onclick="setData()">打印本地的值</button>
+  <button onclick="getData()">点击获取值vue的值</button>
+</body>
+<script>
+  var wpsData;
+  var aaaaa = '22222'
+  function setData() {
+    alert(aaaaa)
+  }
+  function getData() {
+    alert(wpsData)
+  }
+  window.addEventListener('message', function (messageEvent) {
+    console.log(messageEvent)
+    var data = messageEvent.data;
+    console.log('收到vue的数据：', data);
+    wpsData = data
+    console.log('wpsData：', wpsData);
+  }, false);
+
+</script>
+
+</html>

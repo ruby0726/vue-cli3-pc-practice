@@ -1,0 +1,65 @@
+.flex {
+  display: flex;
+}
+
+/* 主轴的方向 */
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 换行 */
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex.grow>* {
+  flex: 1 0 0;
+}
+
+.flex>.fill, .flex-row>.fill, .flex-col>.fill {
+  flex: 1 1 auto;
+}
+
+.flex>.fixed, .flex-row>.fixed, .flex-col>.fixed {
+  flex: 0 0 auto;
+}
+
+/* 主轴对齐方式 */
+.space-between {
+  justify-content: space-between;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+.flex-start {
+  justify-content: flex-start;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.flex-center {
+  justify-content: center;
+}
+
+/* 交叉轴对齐方式 */
+.items-middle {
+  align-items: center;
+}
+
+.items-top {
+  align-items: flex-start;
+}
+
+.items-bottom {
+  align-items: flex-end;
+}
